@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h1>yeni category ekleme sınıfı</h1>
+<br />
+@using (Html.BeginForm())
+{
+    <div class=" form-group">
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x=>x.CategoryName)
+        @Html.ValidationMessageFor(x=>x.CategoryName);
+        <br /><br /> 
+        @Html.Label("Açıklama Yazınız")
+        @Html.TextBoxFor(x=>x.CategoryDescription)
+        @Html.ValidationMessageFor(x => x.CategoryDescription);
+        <br /><br />
+        <button>Kaydet</button>
+    </div>
+}
+
+ 
